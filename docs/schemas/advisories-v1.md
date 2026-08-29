@@ -12,7 +12,7 @@ this doc; `/advisories.json` links it via `$schema`. **Feed:** `GET
 /advisories/feed.xml` (RSS 2.0) publishes records newest-first so consumers can
 subscribe to new/updated records.
 
-**License:** CC-BY 4.0 — attribution "unauth.dev / Raúl Acedo". The dataset
+**License:** CC-BY 4.0 — attribution "unauth.dev". The dataset
 (including the rendered advisory pages and `/advisories.json`) is the only
 CC-BY part of unauth.dev; site copy and brand stay proprietary.
 
