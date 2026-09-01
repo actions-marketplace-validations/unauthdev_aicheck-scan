@@ -11,7 +11,7 @@ give us that window before disclosing publicly.
 
 ## who maintains this
 
-aicheck is built and maintained by one person: **unauth.dev**
+aicheck is built and maintained by one person
 (https://unauth.dev/about). reports go to the maintainer directly — there is
 no separate security team or outsourced triage.
 
