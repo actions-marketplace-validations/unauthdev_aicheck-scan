@@ -304,6 +304,5 @@ aicheck-scan example.com --verbose   # log each dialed connection (with pinned I
 MIT — see [LICENSE](LICENSE). Fix cards and grading by
 [unauth.dev](https://unauth.dev); findings link to the public fix library at
 `unauth.dev/fixes/`. The public advisory dataset (exposure classes + curated
-CVEs, CC-BY 4.0) lives at [`advisories.yaml`](advisories.yaml) and
-[unauth.dev/advisories](https://unauth.dev/advisories). Security reports:
-[SECURITY.md](SECURITY.md).
+CVEs, CC-BY 4.0) lives at [`advisories.yaml`](advisories.yaml). Security
+reports: [SECURITY.md](SECURITY.md).
