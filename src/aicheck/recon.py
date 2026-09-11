@@ -25,6 +25,8 @@ CONCURRENCY = 12
 # ~15-20s at these settings, budget covers stragglers).
 GATHER_BUDGET_S = 40
 USER_AGENT = "aicheck/0.1 (+exposure-checker; safe metadata GETs only)"
+# Hosted QA scans of our own harvest persona must not enter attacker counts.
+SELFTEST_TARGETS = frozenset({"62.238.55.8"})
 
 # (port, path) candidate probes for all tier-1 checkers.
 PROBES: list[tuple[int, str]] = [
@@ -385,7 +387,9 @@ async def gather_facts(
         timeout=TIMEOUT,
         follow_redirects=False,
         verify=False,  # tolerate self-signed certs if a probe redirects to https
-        headers={"User-Agent": USER_AGENT},
+        headers={"User-Agent": (
+            "mimic-selftest/" + USER_AGENT if target in SELFTEST_TARGETS else USER_AGENT
+        )},
     ) as client:
         tasks = {
             asyncio.ensure_future(_probe(client, sem, target, p, path, pinned_ips, log)): (p, path)
